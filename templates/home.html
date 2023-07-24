@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>JasperMarket 3023</h1>
+<p> Legacy tech gadgets</p>
+
+<div class="row">
+
+    <!-- Product 1 -->
+    <div class="col-sm-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/coffee.jpeg') }}" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Quantum Coffee Maker</h5>
+                <p class="card-text">$499</p>
+                <a href="#" class="btn btn-primary addToCartButton">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/socks.jpeg') }}" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Automated Sock Pairer</h5>
+                <p class="card-text">$245</p>
+                <a href="#" class="btn btn-primary addToCartButton">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/toaster.jpeg') }}" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Fusion-Powered Toaster</h5>
+                <p class="card-text">$245</p>
+                <a href="#" class="btn btn-primary addToCartButton">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/keyboard.jpeg') }}" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Holographic Keyboard</h5>
+                <p class="card-text">$67</p>
+                <a href="#" class="btn btn-primary addToCartButton">Add to Cart</a>
+            </div>
+        </div>
+    </div> 
+
+    <div class="col-sm-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/assistant.jpeg') }}" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Personal AI Assistant</h5>
+                <p class="card-text">$245</p>
+                <a href="#" class="btn btn-primary addToCartButton">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='img/watch.jpeg') }}" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Time Travel Wristwatch</h5>
+                <p class="card-text">$245</p>
+                <a href="#" class="btn btn-primary addToCartButton">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var buttons = document.getElementsByClassName('addToCartButton');
+        
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                fbq('track', 'AddToCart');
+            });
+        }
+    </script>
+
+</div>
+
+{% endblock %}

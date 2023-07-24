@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Contact us</h1>
+
+<p>This page fires the Lead event</p>
+
+
+<script>
+    fbq('track', 'Lead');
+</script>
+
+{% endblock %}
